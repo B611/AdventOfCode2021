@@ -3,7 +3,7 @@ def main():
         fishes = [int(i) for i in infile.read().split(",")]
 
     fish_dict = {}
-    for i in range(0, 9):
+    for i in range(9):
         fish_dict[i] = fishes.count(i)
     fish_dict["justborn"] = 0
     print("Star 1 :", count_fishes(80, fish_dict))
@@ -16,7 +16,7 @@ def count_fishes(days: int, fish_dict) -> int:
         fish_dict[7] += fish_dict[0]
         fish_dict[0] = 0
 
-        for i2 in range(0, 8):
+        for i2 in range(8):
             fish_dict[i2] += fish_dict[i2 + 1]
             fish_dict[i2 + 1] = 0
 
